@@ -11,6 +11,7 @@
 #include <memory>
 #include <type_traits>
 
+
 namespace tsfqueue::impl{
 
     template <size_t N>
