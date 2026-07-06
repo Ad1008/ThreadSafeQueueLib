@@ -34,12 +34,12 @@ jobs:
         echo "$CHANGED_FILES"
 
         # SPSC (bounded + unbounded)
-        if echo "$CHANGED_FILES" | grep -E "lockFree_spsc"; then
+        if echo "$CHANGED_FILES" | grep -E "lockfree_spsc"; then
           echo "run_spsc=true" >> $GITHUB_OUTPUT
         fi
 
         # MPMC
-        if echo "$CHANGED_FILES" | grep -E "lockFree_mpmc|blocking_mpmc"; then
+        if echo "$CHANGED_FILES" | grep -E "lockfree_mpmc|blocking_mpmc"; then
           echo "run_mpmc=true" >> $GITHUB_OUTPUT
         fi
 
